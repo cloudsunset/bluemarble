@@ -22,9 +22,3 @@ add_custom_command(TARGET BlueMarble POST_BUILD
 add_custom_command(TARGET BlueMarble POST_BUILD
                    COMMAND ${CMAKE_COMMAND} -E create_symlink "${CMAKE_SOURCE_DIR}/shaders" "${CMAKE_BINARY_DIR}/shaders"
                    COMMAND ${CMAKE_COMMAND} -E create_symlink "${CMAKE_SOURCE_DIR}/textures" "${CMAKE_BINARY_DIR}/textures")
-
-add_executable(Vetores Vetores.cpp)
-target_include_directories(Vetores PRIVATE deps/glm)
-
-add_executable(Matrizes Matrizes.cpp)
-target_include_directories(Matrizes PRIVATE deps/glm)
